@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Minimal Text Editor</title>
+  <style>
+    /* Full-page layout */
+    html, body { height: 100%; margin: 0; background: #f7f7f8; }
+
+    /* Centered container to give a pleasant margin on large screens */
+    .wrap {
+      box-sizing: border-box;
+      height: 100%;
+      padding: 36px;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+    }
+
+    /* The plain text slot */
+    textarea {
+      flex: 1 1 auto;
+      min-width: 320px;
+      height: 100%;
+      border: 1px solid transparent; /* invisible border */
+      outline: none;
+      resize: none;
+      padding: 24px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Segoe UI Mono", "Roboto Mono", monospace;
+      font-size: 24px;          /* user requested */
+      line-height: 1.5;
+      background: #ffffff;
+      color: #0b0b0b;
+      box-shadow: 0 1px 2px rgba(16,24,40,0.04);
+    }
+
+    /* Placeholder color */
+    textarea::placeholder { color: #9aa0a6; }
+
+    /* Keep it minimal on small screens */
+    @media (max-width: 480px) {
+      .wrap { padding: 12px; }
+      textarea { padding: 16px; font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <textarea placeholder="Text goes here..." autofocus>That site is blocked.</textarea>
+  </div>
+</body>
+</html>
